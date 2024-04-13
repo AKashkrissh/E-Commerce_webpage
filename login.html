@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E Commerce - Web</title>
+    <style>
+        /* General styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        a {
+            color: #007bff;
+        }
+
+        /* Forms styles */
+        .forms-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+        }
+
+        .login-form,
+        .registration-form {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        .login-form h2,
+        .registration-form h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .login-form label,
+        .registration-form label {
+            display: block;
+            margin-bottom: 10px;
+            color: #666;
+        }
+
+        .login-form input,
+        .registration-form input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .login-form button,
+        .registration-form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .login-form button:hover,
+        .registration-form button:hover {
+            background-color: #0056b3;
+        }
+
+        .registration-form {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>E Commerce - Web</h1>
+    </header>
+
+    <main>
+        <div class="forms-container">
+            <div class="login-form">
+                <h2>Login</h2>
+                <form id="loginForm" action="/login" method="POST">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required><br><br>
+    
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required><br><br>
+    
+                    <button type="submit">Login</button>
+                </form>
+                <p>Don't have an account? <button onclick="toggleForms()">Register here</button>.</p>
+            </div>
+
+            <div class="registration-form">
+                <h2>Registration</h2>
+                <form id="registrationForm" action="/register" method="POST">
+                    <label for="newUsername">Username:</label>
+                    <input type="text" id="newUsername" name="newUsername" required><br><br>
+    
+                    <label for="newEmail">Email:</label>
+                    <input type="email" id="newEmail" name="newEmail" required><br><br>
+    
+                    <label for="newPhone">Phone Number:</label>
+                    <input type="tel" id="newPhone" name="newPhone"  placeholder="123-456-7890"><br><br>
+    
+                    <label for="newPassword">Password:</label>
+                    <input type="password" id="newPassword" name="newPassword" required><br><br>
+    
+                    <button type="submit">Register</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p> Contact Number:
+            <a href="tel:+919345571716">7418787318</a><br>
+            Gmail:
+            <a href="https://mail.google.com/mail/u/1/#inbox">akashkrishonline@gmail.com</a><br>
+           </p>
+    </footer>
+
+    <script>
+        function toggleForms() {
+            var loginForm = document.querySelector('.login-form');
+            var registrationForm = document.querySelector('.registration-form');
+
+            loginForm.style.display = 'none';
+            registrationForm.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
